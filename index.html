@@ -21,6 +21,26 @@
       color: #fff;
       cursor: pointer;
     }
+    
+    #colorInput {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      padding: 20px;
+      z-index: 9999;
+      background-color: #fff;
+      color: #000;
+    }
+    
+    #colorCode {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      padding: 20px;
+      z-index: 9999;
+      background-color: #fff;
+      color: #000;
+    }
   </style>
   <script>
     function handleTeacherButton() {
@@ -34,9 +54,24 @@
 
     function search_it() {
       var searchInput = document.getElementById("search").value;
-      if (searchInput.toLowerCase() === "[TS](https://www.google.com/search?q=TS)") {
+      if (searchInput.toLowerCase() === "ts") {
         // Your script code here
-        alert("Script is running because you searched for '[TS](https://www.google.com/search?q=TS)'");
+        alert("Script is running because you searched for 'TS'");
+      }
+    }
+
+    function changeBackgroundColor() {
+      var colorInput = document.getElementById("colorInput").value;
+      var colorArray = colorInput.split(",");
+      if (colorArray.length === 3) {
+        var r = parseInt(colorArray[0]);
+        var g = parseInt(colorArray[1]);
+        var b = parseInt(colorArray[2]);
+        if (!isNaN(r) && !isNaN(g) && !isNaN(b)) {
+          var color = "rgb(" + r + ", " + g + ", " + b + ")";
+          document.body.style.backgroundColor = color;
+          document.getElementById("colorCode").innerText = "Color Code: " + color;
+        }
       }
     }
   </script>
