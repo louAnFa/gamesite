@@ -1,21 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="UTF-8">
-        <title>Home</title>
-      <link rel="icon" type="image/x-icon" href="./icons/googleclassroom.png">
-        <meta property="og:title" content="Play unblocked games online" />
-        <meta property="og:description" content="All of the most popular games playable in your browser! With games such as Subway Surfers, 1v1.lol, Retrobowl, Slope, and many more fun games!" />
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://kit.fontawesome.com/d0c5025972.js" crossorigin="anonymous"></script>
-        <meta name="theme-color" content="var(--bgColor)">
-    </head>
-    <body>
-            <!--Page Content Below-->
-        <img id="userPhoto" class="animated rubberBand fast" src="icons/logo.png" alt="Your Name's Photo">
-        <h1 class="animated jello game_title">Unblocked Games</h1>
-        <div id="links" class="animated fadeInLeft delay-1s games">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="icon" type="image/x-icon" href="./icons/googleclassroom.png">
+  <meta property="og:title" content="Play unblocked games online" />
+  <meta property="og:description" content="All of the most popular games playable in your browser! With games such as Subway Surfers, 1v1.lol, Retrobowl, Slope, and many more fun games!" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/d0c5025972.js" crossorigin="anonymous"></script>
+  <meta name="theme-color" content="var(--bgColor)">
+  <style>
+    #teacherButton {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 20px;
+      z-index: 9999;
+      background-color: #f00;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function handleTeacherButton() {
+      alert("Click Z if a teacher comes by");
+      window.addEventListener("keydown", function(event) {
+        if (event.key === "z") {
+          window.location.href = "https://classroom.google.com/u/1/h";
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+  <!--Page Content Below-->
+  <img id="userPhoto" class="animated rubberBand fast" src="icons/logo.png" alt="Your Name's Photo">
+  <h1 class="animated jello game_title">Unblocked Games</h1>
+  <div id="links" class="animated fadeInLeft delay-1s games">
+    <div class="game_title">
+      <input placeholder="Search" id="search" class="search" onkeyup="search_it()" type="search">
+      <select id="tags" class="button" onclick="search_it()">
+        <option value="all">All</option>
+        <option value="pop">Popular</option>
+        <option value="two">Two Player</option>
+        <option value="stream">Streaming</option>
+        <option value="bad">Bad Games</option>
+      </select>
+    </div>
+    <h2 class="animated jello game_title">All Games:</h2>
             <div class="game_title"><input placeholder="Search" id="search" class="search" onkeyup="search_it()" type="search"><select id="tags" class="button" onclick="search_it()"><option value="all">All</option><option value="pop">Popular</option><option value="two">Two Player</option><option value="stream">Streaming</option><option value="bad">Bad Games</option></select></div>
             <h2 class="animated jello game_title">All Games:</h2>
             <a id="My singing monsters" class="link" href="./play/My-Singing-Monsters-main/" target="_blank"><span class="bar"></span><img src="./icons/prox.jpg"><b>Bypasser (web proxy)</b></a>
