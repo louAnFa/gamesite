@@ -59,6 +59,51 @@
       }
     }
 
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="icon" type="image/x-icon" href="./icons/googleclassroom.png">
+  <meta property="og:title" content="Play unblocked games online" />
+  <meta property="og:description" content="All of the most popular games playable in your browser! With games such as Subway Surfers, 1v1.lol, Retrobowl, Slope, and many more fun games!" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/d0c5025972.js" crossorigin="anonymous"></script>
+  <meta name="theme-color" content="var(--bgColor)">
+  <style>
+    #teacherButton {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 20px;
+      z-index: 9999;
+      background-color: #f00;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    #colorInput {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      padding: 20px;
+      z-index: 9999;
+      background-color: #fff;
+      color: #000;
+    }
+    
+    #colorCode {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      padding: 20px;
+      z-index: 9999;
+      background-color: #fff;
+      color: #000;
+    }
+  </style>
+  <script>
     function changeBackgroundColor() {
       var colorInput = document.getElementById("colorInput").value;
       var colorArray = colorInput.split(",");
@@ -73,6 +118,14 @@
         }
       }
     }
+  </script>
+</head>
+<body> 
+  <input type="text" id="colorInput" placeholder="Enter RGB color code">
+  <button onclick="changeBackgroundColor()">Change Background Color</button>
+  <div id="colorCode"></div>
+</body>
+</html>
   </script>
 </head>
 <body> 
